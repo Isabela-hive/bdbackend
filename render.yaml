@@ -1,0 +1,14 @@
+version: 1
+services:
+  - name: backend
+    env:
+      - key: NODE_ENV
+        value: production
+        host: 'localhost',
+  user: 'root',
+  password: '@isabellah',
+  database: 'bunyala',
+      # Add other environment variables here if needed
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
